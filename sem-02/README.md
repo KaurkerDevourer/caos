@@ -13,6 +13,7 @@
 #### Генерируем asm
 ```gcc -S -masm=intel file.c```
 
+# ASM
 ## Регистры
 
 На 32 битной архитектуре есть 8 регистров общего назначения:
@@ -67,6 +68,27 @@ RIP - указатель адреса следующей инструкции д
     jbe     label   /* переход, если <= (беззнаковый) */
 ```
 
+## Инструкции
+#### В Intel порядок DST, SRC обратен AT&T
+```
+add    DST, SRC        /* DST += SRC */
+sub    DST, SRC        /* DST -= SRC */
+inc    DST             /* ++DST */
+dec    DST             /* --DST */
+neg    DST             /* DST = -DST */
+mov    DST, SRC        /* DST = SRC */
+imul   SRC             /* (%eax,%edx) = %eax * SRC - знаковое */
+mul    SRC             /* (%eax,%edx) = %eax * SRC - беззнаковое */
+and    DST, SRC        /* DST &= SRC */
+or     DST, SRC        /* DST |= SRC */
+xor    DST, SRC        /* DST ^= SRC */
+not    DST             /* DST = ~DST */
+cmp    DST, SRC        /* DST - SRC, результат не сохраняется, */
+test   DST, SRC        /* DST & SRC, результат не сохраняется  */
+adc    DST, SRC        /* DST += SRC + CF */
+sbb    DST, SRC        /* DST -= SRC - CF */
+```
+
 ## simpleio
 
 readi32 - считать 32 битное число (сложится в eax)
@@ -115,4 +137,4 @@ writei64 - напечатать 64 битное число (печатается
     set $eax=5 - установить значение $eax равное 5
     jump main - продолжить выполнение с другого места (не обязательно main, можно указать любое другое место или номер строки)
     p/t $eax^3 - напечатать в бинарном виде рузультат выполнения команды $eax XOR 3 (другие логические операции тоже можно использовать)
-    ctrl+x o - переключиться между панелями
+    ctrl+x a - переключиться между панелями
