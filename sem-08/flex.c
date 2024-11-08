@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char str2[] = {0b11001100, 0b10001000, 0x00};
+    printf("%s\n", str2);
+    char str[] = {0b11010000, 0b10110101, 0x00};
+    printf("%s\n", str);
+    char concat[] = {0b11010000, 0b10110101, 0b11001100, 0b10001000, 0x00};
+    printf("%s\n", concat);
+    char concat2[] = {0b11010000, 0b10110101, 0b00111010, 0x00};
+    printf("%s\n", concat2);
+    char flex[] = {0xf0, 0x9f, 0x91, 0xa8, 0xe2, 0x80, 0x8d, 0xf0, 0x9f, 0x91, 0xa9, 0xe2, 0x80, 0x8d, 0xf0, 0x9f, 0x91, 0xa7, 0xe2, 0x80, 0x8d, 0xf0, 0x9f, 0x91, 0xa7, 0x00};
+    printf("%s\n", flex);
+}
