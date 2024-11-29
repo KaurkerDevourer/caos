@@ -1,0 +1,3 @@
+gcc hypot.c hypot.S -o hypot -lm
+gcc dot_product.S dot_product.c dot_product_vec.S -o dot_product
+gcc -O3 -ftree-vectorize -msse2 -mfpmath=sse dot_product.S dot_product.c dot_product_vec.S -o dot_product
