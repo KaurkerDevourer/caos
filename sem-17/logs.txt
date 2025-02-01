@@ -1,0 +1,6 @@
+[2024-01-15 10:15:30] INFO: User john.doe@example.com logged in
+[2024-01-15 10:16:45] ERROR: Failed login attempt from 192.168.1.100
+[2024-01-15 10:20:12] WARNING: High CPU usage detected
+[2024-01-15 10:25:30] INFO: Database backup completed
+[2024-01-15 10:30:45] ERROR: Connection timeout at api.example.com
+[2024-01-15 10:35:22] INFO: User alice.smith@company.com logged in

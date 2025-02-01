@@ -1,0 +1,5 @@
+John Doe, +1-555-123-4567, john.doe@example.com
+Alice Smith, (555) 987-6543, alice.smith@company.com
+Bob Wilson, 555.789.0123, bob.wilson@test.org
+Jane Brown, +44 20 7123 4567, jane.brown@mail.co.uk
+Mike Johnson, 1-555-321-7654, mike.j@domain.com
