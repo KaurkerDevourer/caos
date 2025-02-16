@@ -2,7 +2,7 @@
 
 expression="$*"
 
-# echo "$expression"
+echo "$expression"
 
 result=$(echo "$expression" | bc)
 

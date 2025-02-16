@@ -1,5 +1,5 @@
 greet() {
-    echo "Hello, $1!"
+    echo "Hello, $1! Have a $2 day."
 }
 
-greet Alice
+greet Alex $1
