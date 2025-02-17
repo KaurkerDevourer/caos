@@ -1,0 +1,8 @@
+log1
+error2 - bad error
+error1 - internal
+log2
+log3
+error4 - eof
+log4
+error3 - sigpipe
