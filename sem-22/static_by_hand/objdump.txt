@@ -222,10 +222,23 @@ Disassembly of section .text:
     12ad:	5d                   	pop    %rbp
     12ae:	c3                   	ret    
 
+00000000000012af <add2>:
+    12af:	f3 0f 1e fa          	endbr64 
+    12b3:	55                   	push   %rbp
+    12b4:	48 89 e5             	mov    %rsp,%rbp
+    12b7:	89 7d fc             	mov    %edi,-0x4(%rbp)
+    12ba:	89 75 f8             	mov    %esi,-0x8(%rbp)
+    12bd:	8b 55 fc             	mov    -0x4(%rbp),%edx
+    12c0:	8b 45 f8             	mov    -0x8(%rbp),%eax
+    12c3:	01 d0                	add    %edx,%eax
+    12c5:	83 c0 02             	add    $0x2,%eax
+    12c8:	5d                   	pop    %rbp
+    12c9:	c3                   	ret    
+
 Disassembly of section .fini:
 
-00000000000012b0 <_fini>:
-    12b0:	f3 0f 1e fa          	endbr64 
-    12b4:	48 83 ec 08          	sub    $0x8,%rsp
-    12b8:	48 83 c4 08          	add    $0x8,%rsp
-    12bc:	c3                   	ret    
+00000000000012cc <_fini>:
+    12cc:	f3 0f 1e fa          	endbr64 
+    12d0:	48 83 ec 08          	sub    $0x8,%rsp
+    12d4:	48 83 c4 08          	add    $0x8,%rsp
+    12d8:	c3                   	ret    

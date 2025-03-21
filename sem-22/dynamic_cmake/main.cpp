@@ -2,6 +2,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << "5 + 3 = " << add(5, 3) << std::endl;
+    std::cout << "5 + 4 = " << add(5, 4) << std::endl;
     return 0;
 }
