@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 void* func(void* smth) {
-    // pthread_detach(pthread_self());
+    pthread_detach(pthread_self());
     printf("hello\n");
     return NULL;
 }

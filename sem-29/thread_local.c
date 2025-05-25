@@ -4,10 +4,10 @@
 
 #define N 5
 
-_Thread_local int val;
+_Thread_local int val = 0;
 // int val;
 
-void* func(void* smth) {
+void* func(void*) {
     printf("%p\n", (void*)&val);
     return NULL;
 }

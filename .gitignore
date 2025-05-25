@@ -5,3 +5,5 @@
 *sem-10*
 *.out
 *build*
+*.DS_Store*
+*.so*
