@@ -26,7 +26,10 @@ shadow_address = (address >> 3) + kOffset;
 
 # MSAN
 
-1-to-1 бит representation.
+1-to-1 bit representation.
+Не каждая неинициализированная переменная - баг.
+Пример - падинги в структурах.
+
 Интересность тут - tracking origins.
 
 ```
@@ -36,7 +39,10 @@ c = *a + *b
 if (c)
 ```
 
-Кто виноват? 'a' или 'b'?
+Кто виноват? 'a' или 'b'? Чтобы определить, msan с флагом сохраняет откуда мы получили память.
+```
+clang++ -g msan_origin.cpp -fsanitize=memory -fsanitize-memory-track-origins=2
+```
 
 # TSAN
 
