@@ -1,0 +1,81 @@
+
+main.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	bf 02 00 00 00       	mov    $0x2,%edi
+   9:	be 03 00 00 00       	mov    $0x3,%esi
+   e:	e8 00 00 00 00       	call   13 <main+0x13>
+  13:	89 c6                	mov    %eax,%esi
+  15:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 1c <main+0x1c>
+  1c:	b0 00                	mov    $0x0,%al
+  1e:	e8 00 00 00 00       	call   23 <main+0x23>
+  23:	31 c0                	xor    %eax,%eax
+  25:	5d                   	pop    %rbp
+  26:	c3                   	ret    
+
+Disassembly of section .rodata.str1.1:
+
+0000000000000000 <.L.str>:
+   0:	32 20                	xor    (%rax),%ah
+   2:	2b 20                	sub    (%rax),%esp
+   4:	33 20                	xor    (%rax),%esp
+   6:	3d 20 25 64 0a       	cmp    $0xa642520,%eax
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 55 62             	add    %dl,0x62(%rbp)
+   3:	75 6e                	jne    73 <main+0x73>
+   5:	74 75                	je     7c <main+0x7c>
+   7:	20 63 6c             	and    %ah,0x6c(%rbx)
+   a:	61                   	(bad)  
+   b:	6e                   	outsb  %ds:(%rsi),(%dx)
+   c:	67 20 76 65          	and    %dh,0x65(%esi)
+  10:	72 73                	jb     85 <main+0x85>
+  12:	69 6f 6e 20 31 34 2e 	imul   $0x2e343120,0x6e(%rdi),%ebp
+  19:	30 2e                	xor    %ch,(%rsi)
+  1b:	30 2d 31 75 62 75    	xor    %ch,0x75627531(%rip)        # 75627552 <main+0x75627552>
+  21:	6e                   	outsb  %ds:(%rsi),(%dx)
+  22:	74 75                	je     99 <main+0x99>
+  24:	31 2e                	xor    %ebp,(%rsi)
+  26:	31 00                	xor    %eax,(%rax)
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	01 7a 52             	add    %edi,0x52(%rdx)
+   b:	00 01                	add    %al,(%rcx)
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    %ebx,(%rbx)
+  11:	0c 07                	or     $0x7,%al
+  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  1e:	00 00                	add    %al,(%rax)
+  20:	00 00                	add    %al,(%rax)
+  22:	00 00                	add    %al,(%rax)
+  24:	27                   	(bad)  
+  25:	00 00                	add    %al,(%rax)
+  27:	00 00                	add    %al,(%rax)
+  29:	41 0e                	rex.B (bad) 
+  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
+  31:	62                   	(bad)  
+  32:	0c 07                	or     $0x7,%al
+  34:	08 00                	or     %al,(%rax)
+	...
+
+Disassembly of section .llvm_addrsig:
+
+0000000000000000 <.llvm_addrsig>:
+   0:	06                   	(bad)  
+   1:	05                   	.byte 0x5
