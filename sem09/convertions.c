@@ -57,12 +57,12 @@ int main() {
         num += 5;
         // не всегда выполняется
         // но вот в double все int помещаются уже
-        // print_float(num);
+        print_float(num);
 
-        printf(
-            "num = %-16d\t(float)num = %-16f\t(int)(float)num = %-16d\tare "
-            "equal "
-            "= %d\n",
-            num, (float)num, (int)(float)num, num == (int)(float)num);
+        // printf(
+        //     "num = %-16d\t(float)num = %-16f\t(int)(float)num = %-16d\tare "
+        //     "equal "
+        //     "= %d\n",
+        //     num, (float)num, (int)(float)num, num == (int)(float)num);
     }
 }

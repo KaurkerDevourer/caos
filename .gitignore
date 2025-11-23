@@ -1,9 +1,11 @@
 *.history*
-*sem-05*
+*2024/sem-05*
 *testing*
-*sem-07*
-*sem-10*
+*.vscode*
+*2024/sem-07*
+*2024/sem-10*
 *.out
 *build*
 *.DS_Store*
 *.so*
+*secrets*
